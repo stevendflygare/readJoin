@@ -66,16 +66,16 @@ int main(int argc, const char * argv[]) {
         l1 = kseq_read(seq1);
         l2 = kseq_read(seq2);
         while (l1 >= 0 && l2 >= 0) {
-            if (strncmp(seq1->name.s, seq2->name.s, seq1->seq.l) != 0) {
+            /*if (strncmp(seq1->name.s, seq2->name.s, seq1->seq.l) != 0) {
                 printf("problem, names of reads not the same\n");
                 printf("%s\n%s\n",seq1->name.s,seq2->name.s);
-            }
-            else {
-                char tmp[2000];
-                memset(tmp, '\0', sizeof(char)*2000);
-                sprintf(tmp, "%sN%s",seq1->seq.s,seq2->seq.s);
-                fprintf(out, ">%s\n%s\n",seq1->name.s,tmp);
-            }
+            }*/
+            //else {
+            char tmp[2000];
+            memset(tmp, '\0', sizeof(char)*2000);
+            sprintf(tmp, "%sN%s",seq1->seq.s,seq2->seq.s);
+            fprintf(out, ">%s\n%s\n",seq1->name.s,tmp);
+            //}
             l1 = kseq_read(seq1);
             l2 = kseq_read(seq2);
         }
