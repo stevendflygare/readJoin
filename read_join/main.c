@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
         seq1 = kseq_init(fp1);
         
         int l1;
-        uint64_t line_count = 1;
+        unsigned long long line_count = 1;
         l1 = kseq_read(seq1);
         char tmp[2000];
         memset(tmp, '\0', sizeof(char)*2000);
